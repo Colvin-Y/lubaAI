@@ -56,8 +56,8 @@ else:
     coze = Coze(auth=TokenAuth(token=coze_api_token), base_url=COZE_CN_BASE_URL)
 
     # create bot
-    bot_id = '7483399402716643367'
-    user_id = '123'
+    bot_id = "{0}".format(st.secrets['COZE_BOT_ID'])
+    user_id = '{0}'.format(st.session_state.user_info['email'])
 
     st.set_page_config(page_title="路霸 AI: A股金融专家")
     with st.sidebar:
